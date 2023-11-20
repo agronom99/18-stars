@@ -5,8 +5,7 @@ body {
   background-color: black;
 }
 
-.wrapper {
-}
+
 
 .sky {
   position: fixed;
@@ -122,4 +121,9 @@ body {
   100% {
     transform: scale(3);
   }
+}
+
+.audio{
+    height: 25px;
+    width: 480px;
 }
