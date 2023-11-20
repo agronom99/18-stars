@@ -1,0 +1,125 @@
+@import url("reset.css");
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+.wrapper {
+}
+
+.sky {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  animation: sky 500s infinite linear alternate ;
+}
+.earth{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    padding: 3.125rem;
+    animation:earth 100s infinite linear alternate ;
+}
+
+.star {
+  will-change: transform;
+  width: 0.1875rem;
+  height: 0.1875rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.star--type-0{
+    animation: 
+        sar-0 5s infinite ease alternate,
+        opacity 2s infinite linear alternate,
+        color 30s infinite ease alternate;
+}
+.star--type-1{
+    animation: 
+        sar-1 8s infinite ease alternate-reverse,
+        opacity 2s infinite linear alternate-reverse,
+        color 30s infinite ease alternate-reverse;
+}
+.star--type-2{
+    animation: 
+        sar-1 12s infinite ease alternate,
+        opacity 4s infinite linear alternate,
+        color 20s infinite ease alternate;
+}
+
+@keyframes earth{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.5);
+    }
+}
+
+@keyframes star-0 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@keyframes star-1 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.2);
+  }
+}
+@keyframes star-2 {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes color {
+  0% {
+    background-color: #fff;
+  }
+  25% {
+    background-color: #f8baba;
+  }
+  50% {
+    background-color: #f0fabd;
+  }
+  75% {
+    background-color: #c7cffa;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes sky {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
